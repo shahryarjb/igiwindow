@@ -7,7 +7,8 @@ defmodule Igiwindow.MixProject do
       version: "0.1.0",
       elixir: "~> 1.18",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      package: package()
     ]
   end
 
@@ -22,6 +23,12 @@ defmodule Igiwindow.MixProject do
   defp deps do
     [
       {:igniter, "~> 0.5.9"}
+    ]
+  end
+
+  defp package() do
+    [
+      files: ~w(lib priv .formatter.exs mix.exs LICENSE README*)
     ]
   end
 end
