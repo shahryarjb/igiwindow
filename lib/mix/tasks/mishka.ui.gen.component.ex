@@ -23,7 +23,7 @@ defmodule Mix.Tasks.Mishka.Ui.Gen.Component do
       # `OptionParser` schema
       schema: [
         variant: :string,
-        color: :string,
+        color: :csv,
         size: :string,
         module: :string,
         padding: :string,
@@ -77,8 +77,11 @@ defmodule Mix.Tasks.Mishka.Ui.Gen.Component do
 
   def convert_option(nil), do: nil
 
-  def convert_option(value),
+  def convert_option(value) when is_binary(value),
     do: String.trim(value) |> String.split(",") |> Enum.map(&String.trim/1)
+
+  def convert_option(value),
+    do: Enum.map(value, &String.trim/1)
 
   def atom_to_module(field) do
     field
