@@ -22,7 +22,7 @@ defmodule Igiwindow.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:igniter, "~> 0.5.14"}
+      {:igniter, github: "ash-project/igniter"}
     ]
   end
 
