@@ -48,7 +48,7 @@ defmodule Mix.Tasks.Mishka.Ui.Gen.Component do
   def igniter(igniter, argv) do
     # extract positional arguments according to `positional` above
     {%{component: component}, argv} = positional_args!(argv)
-
+    IO.inspect(argv, "argv=-=-=-=-=-=-=-=>")
     options = options!(argv)
     IO.inspect(options, label: "=-==-=-=-=>")
 
