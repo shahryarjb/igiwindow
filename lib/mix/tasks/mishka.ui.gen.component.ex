@@ -50,6 +50,7 @@ defmodule Mix.Tasks.Mishka.Ui.Gen.Component do
     {%{component: component}, argv} = positional_args!(argv)
 
     options = options!(argv)
+    IO.inspect(options, label: "=-==-=-=-=>")
 
     template_path =
       Application.app_dir(:igiwindow, ["priv", "components"])
