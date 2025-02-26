@@ -25,7 +25,7 @@ defmodule Igiwindow.MixProject do
       {:phoenix, "~> 1.7.19"},
       {:phoenix_html, "~> 4.2"},
       {:phoenix_live_view, "~> 1.0.4", override: true},
-      {:igniter, "~> 0.5.25", only: [:dev, :test]}
+      {:igniter, "0.5.26", only: [:dev, :test]}
     ]
   end
 
